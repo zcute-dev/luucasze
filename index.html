@@ -394,8 +394,10 @@ pre { background:rgba(0,0,0,0.5); border-radius:12px; padding:16px; font-size:11
   .month-arrow { width:30px; height:30px; font-size:14px; }
   .month-btn { font-size:11px; padding:6px 12px; }
 
-  /* KPI grid — 2 colunas nos principais */
+  /* KPI grid mobile: saldo full width, receita+despesa na mesma linha */
   #kpiGrid { grid-template-columns:repeat(2,1fr) !important; gap:8px; }
+  #kpiGrid .kpi:first-child { grid-column: span 2; }
+  #kpiGrid .kpi:first-child .kpi-value { font-size:28px !important; }
 
   /* Bancos — 2 colunas */
   #kpiCartoes { grid-template-columns:repeat(2,1fr) !important; gap:8px; margin-bottom:12px; }
